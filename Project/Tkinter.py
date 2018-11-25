@@ -2,7 +2,7 @@ from tkinter import*
 import subprocess,sys
 
 def display():
-    p = subprocess.Popen(["powershell.exe","C:\\Users\\lenovo\\Cm.ps1"],stdout=sys.stdout)
+    p = subprocess.Popen(["powershell.exe","C:\\Users\\lenovo\\Documents\\GitHub\\Classroom_Automation\\Project\\Cm.ps1"],stdout=sys.stdout)
     p.communicate()
 
 window=Tk()

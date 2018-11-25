@@ -2,11 +2,11 @@ from tkinter import*
 import subprocess,sys
 
 def On():
-    p = subprocess.Popen(["powershell.exe","C:\\Users\\lenovo\\Cm.ps1"], stdout=sys.stdout)
+    p = subprocess.Popen(["powershell.exe","C:\\Users\\lenovo\\Documents\\GitHub\\Classroom_Automation\\Project\\Cm.ps1"], stdout=sys.stdout)
     p.communicate()
 
 def Off():
-    q = subprocess.Popen(["powershell.exe","C:\\Users\\lenovo\\FILE NAME"], stdout=sys.stdout)
+    q = subprocess.Popen(["powershell.exe","C:\\Users\\lenovo\\Documents\\GitHub\\Classroom_Automation\\Project\\Cm.ps1"], stdout=sys.stdout)
     q.communicate()
 
 window=Tk()
