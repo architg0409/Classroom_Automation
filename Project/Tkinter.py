@@ -11,7 +11,9 @@ window.geometry('900x700')
 window.configure(background="lemon chiffon")
 f=("Courier",14)
 
-LoginLabel=Label(window,text="Enter Login Details",font=("Courier",40),fg="green yellow",bg="lemon chiffon")
+Login1Label=Label(window,text="Classroom Automation",font=("Courier",40),fg="green yellow",bg="lemon chiffon")
+
+LoginLabel=Label(window,text="Enter Login Details:",font=("Courier",30),fg="green yellow",bg="lemon chiffon")
 
 UserLabel=Label(window,text="Username :",font=f,fg="green",bg="lemon chiffon")
 UserEntry=Entry(window,bg="azure",font=f,fg="green")
@@ -21,14 +23,16 @@ PassEntry=Entry(window,show="*",bg="azure",font=f,fg="green")
 
 SubmitButton=Button(window,text="Submit",fg="white",font=f,bg="green",command=display)
 
-LoginLabel.place(x=170,y=100)
+Login1Label.place(x=160,y=50)
 
-UserLabel.place(x=250,y=220)
-PassLabel.place(x=250,y=270)
+LoginLabel.place(x=210,y=150)
 
-UserEntry.place(x=370,y=220)
-PassEntry.place(x=370,y=270)
+UserLabel.place(x=270,y=250)
+PassLabel.place(x=270,y=300)
 
-SubmitButton.place(x=350,y=330)
+UserEntry.place(x=370,y=250)
+PassEntry.place(x=370,y=300)
+
+SubmitButton.place(x=400,y=380)
 
 window.mainloop()
