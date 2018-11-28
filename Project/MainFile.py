@@ -1,5 +1,7 @@
 from tkinter import*
 import subprocess,sys
+import mysql.connector
+from tkinter import messagebox
 
 window=Tk()
 window.title("Classroom Automation")
@@ -9,10 +11,33 @@ frame2=Frame(window,height=700,width=900,bg="lemon chiffon")
 frame3=Frame(window,height=700,width=900,bg="lemon chiffon")
 f=("Artifika",20)
 f1=("Artifika",24)
-
-
+UserEntry=Entry(frame2,bg="azure",font=f,fg="green")
+PassEntry=Entry(frame2,show="*",bg="azure",font=f,fg="green")
+try:
+    con = mysql.connector.connect(user='root',password='architgupta97',host='localhost',database='timeslotsdb')
+    cursor = con.cursor()
+except:
+    pass
 def Automatic():
     print("Hello")
+
+def Database_Check():
+    UserName=UserEntry.get()
+    Password=PassEntry.get()
+    try:
+        cursor.execute("""select * from users""")
+        result = cursor.fetchall()
+        flag=0
+        for users in result:
+            if(users[1]==UserName and users[2]==Password):
+                flag=1
+                Manual()
+                break
+        if flag==0:
+            messagebox.showwarning("Warning","No User with such Credentials")
+    except:
+        pass
+    
 
 def On():
     p = subprocess.Popen(["powershell.exe","C:\\Users\\lenovo\\Documents\\GitHub\\Classroom_Automation\\Project\\Cm.ps1"], stdout=sys.stdout)
@@ -51,18 +76,18 @@ def Manual():
     
 
 def Login():
+
+    global UserEntry,PassEntry
     frame1.destroy()
     LoginLabela=Label(frame2,text="Classroom Automation",font=("Artifika",40),fg="steel blue",bg="lemon chiffon")
 
     LoginLabelb=Label(frame2,text="Enter Login Details",font=("Artifika",30),fg="steel blue",bg="lemon chiffon")
 
     UserLabel=Label(frame2,text="Username",font=f,fg="green",bg="lemon chiffon")
-    UserEntry=Entry(frame2,bg="azure",font=f,fg="green")
 
     PassLabel=Label(frame2,text="Password",font=f,fg="green",bg="lemon chiffon")
-    PassEntry=Entry(frame2,show="*",bg="azure",font=f,fg="green")
 
-    SubmitButton=Button(frame2,text="Submit",fg="white",font=f,bg="green",command=Manual)
+    SubmitButton=Button(frame2,text="Submit",fg="white",font=f,bg="green",command=Database_Check)
 
     frame2.pack() 
     
