@@ -2,7 +2,7 @@
 * Classroom Automation using Arduino.
 * Automating lights and fans of a classroom according to Timetable.
 * Prerequisites : Good Knowledge of Database and Python Tkinter.
-* Tkinter Module is used For GUI.
+* Tkinter Module is used for GUI.
 
 
 ## Python Modules Used:
