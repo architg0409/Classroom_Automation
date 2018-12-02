@@ -9,7 +9,7 @@
 * mysql.connector
 * datetime
 * time
-* serial
+* pyserial
 
 ## Softwares Used:
 * WampServer For Database Management.
