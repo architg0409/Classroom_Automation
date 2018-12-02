@@ -19,8 +19,9 @@
 
 ## Hardwares Used:
 * Arduino Mega 2560.
-* 4 Channel Relay Board.
+* Single Channel Relay Board.
 * Cable For Arduino UNO/MEGA (USB A to B).
+* Male to Female Jumper Wires.
 
 
 
