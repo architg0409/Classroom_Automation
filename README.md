@@ -1,6 +1,6 @@
 # Classroom Automation
 * Classroom Automation using Arduino.
-* Controlling the lights and fans of a classroom according to Timetable.
+* Automating lights and fans of a classroom according to Timetable.
 * Prerequisites : Good Knowledge of Database and Python Tkinter.
 
 
