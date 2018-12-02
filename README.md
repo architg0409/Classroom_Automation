@@ -1,8 +1,6 @@
 # Classroom Automation
 * Classroom Automation using Arduino.
-
 * Controlling the lights and fans of a classroom according to Timetable.
-
 * Prerequisites : Good Knowledge of Database and Python Tkinter.
 
 
@@ -21,6 +19,7 @@
 ## Hardwares Used:
 * Arduino Mega 2560.
 * 4 Channel Relay Board.
+* Cable For Arduino UNO/MEGA (USB A to B).
 
 
 
