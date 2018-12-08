@@ -23,11 +23,11 @@ def Automatic():
     day=datetime.datetime.today().weekday()
     
     currentTime=datetime.datetime.now()
-    hour=currentTime.strftime("%H")
+    minute=currentTime.strftime("%M")
     
     for i in range(0,9):
-            hour2=list(str(result[i][1]).split(":"))[0]
-            if hour2==hour:
+            minute2=list(str(result[i][1]).split(":"))[1]
+            if minute2==minute:
                 res=result[i][day+2]
                 if res==0:
                     print("Light is Switched Off")
@@ -38,24 +38,6 @@ def Automatic():
                     
     AutoButton.after(10000,Automatic)
     
-
-
-#Time Checking    
-def Time_Check():
-    currentTime=datetime.datetime.now()
-    
-    hour=currentTime.strftime("%H")
-    minute=currentTime.strftime("%M")
-    
-    if int(minute)==0 and int(hour)==8:
-        print("Shifting to Automatic")
-        Automatic()
-    elif int(hour)==7 and int(minute)>=55:
-        print("Light is Switched On")
-        On()
-        AutoButton.after(10000,Time_Check)
-    else:
-        AutoButton.after(10000,Time_Check)
     
 
 
@@ -81,11 +63,10 @@ def Database_Check():
 
 
 
-
 #Manual Frame Function
 def Manual():
-    
     frame2.pack_forget()
+    
     
     Login1Label=Label(frame3,text="Classroom Automation",font=("Roboto",43),fg="steel blue",bg="lemon chiffon")
     Login2Label=Label(frame3,text="Welcome to Manual System",font=("Roboto",35),fg="steel blue",bg="lemon chiffon")
@@ -204,7 +185,7 @@ def Home():
     ManButton.config( height = 1, width = 10 )
 
     
-    Time_Check()
+    Automatic()
 
 
 
@@ -224,7 +205,7 @@ frame2=Frame(window,height=height_value,width=width_value,bg="lemon chiffon")
 frame3=Frame(window,height=height_value,width=width_value,bg="lemon chiffon")
 
 
-f=("Roboto",20) 
+f=("Roboto",20)
 f1=("Roboto",24)
 
 
@@ -243,7 +224,7 @@ Arduino_Serial = serial.Serial(port='COM4',baudrate=9600)    #Setting Arduino Se
 try:
     con = mysql.connector.connect(user='root',password='architgupta97',host='localhost',database='timeslotsdb')
     cursor = con.cursor()
-    cursor.execute("select * from time3")
+    cursor.execute("select * from time1")
     result=cursor.fetchall()
 except:
     pass
