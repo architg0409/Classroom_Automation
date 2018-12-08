@@ -9,7 +9,6 @@
 * Tkinter
 * mysql.connector
 * datetime
-* time
 * pyserial
 
 ## Softwares Used:
