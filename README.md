@@ -23,7 +23,7 @@
 * Male to Female Jumper Wires.
 
 ## Connections:
-* ![alt text][C:\Users\lenovo\Desktop\Lightoff.jpg]
+* ![alt text][Lightoff.jpg]
 
 ### Note:
 * Mainfiles won't run if you haven't connected Arduino to your PC.
