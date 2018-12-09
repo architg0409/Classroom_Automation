@@ -22,7 +22,10 @@
 * Cable For Arduino UNO/MEGA (USB A to B).
 * Male to Female Jumper Wires.
 
-## Note:
+## Connections:
+* ![alt text][C:\Users\lenovo\Desktop\Lightoff.jpg]
+
+### Note:
 * Mainfiles won't run if you haven't connected Arduino to your PC.
 * You need to change the Com port in the python file according to your PC.
 * There are two types of table in database, one for switching relay on or off every minute and the other one for every hour.
