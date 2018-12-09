@@ -22,8 +22,6 @@
 * Cable For Arduino UNO/MEGA (USB A to B).
 * Male to Female Jumper Wires.
 
-## Connections:
-* ![alt text][Lightoff.jpg]
 
 ### Note:
 * Mainfiles won't run if you haven't connected Arduino to your PC.
